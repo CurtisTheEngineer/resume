@@ -1,0 +1,34 @@
+html {
+    /* Offset for the sticky navbar */
+    scroll-padding-top: 70px; 
+    /* Enable smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fa; /* A slightly off-white from Bootstrap */
+}
+
+.job-entry ul li, .education-entry ul li {
+    padding-left: 10px;
+}
+
+.job-entry .fa-chevron-right, .education-entry .fa-chevron-right {
+    color: var(--mdb-primary);
+}
+
+/* Make the active nav link stand out more */
+#navbar-main .navbar-nav .nav-link.active {
+    font-weight: 600;
+    color: var(--mdb-primary) !important;
+}
+
+/* A subtle animation for cards on hover */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}

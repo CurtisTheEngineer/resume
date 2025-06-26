@@ -1,142 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curtis Warren - Software Engineer</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="hero">
-        <div class="container">
-            <h1>Curtis Warren</h1>
-            <p class="title">Software Engineer | 6+ Years of Experience</p>
-            <div class="contact-info">
-                <a href="mailto:curtiswarrensoftware@gmail.com">curtiswarrensoftware@gmail.com</a>
-            </div>
+
+<body data-mdb-spy="scroll" data-mdb-target="#navbar-main" data-mdb-offset="0">
+    <!-- Header -->
+    <header>
+        <div class="p-5 text-center bg-dark text-white">
+            <h1 class="mb-3 display-4">Curtis Warren</h1>
+            <h4 class="mb-3 fw-light">Software Engineer | 6+ Years of Experience</h4>
+            <a data-mdb-ripple-init class="btn btn-primary btn-lg" href="mailto:curtiswarrensoftware@gmail.com"
+                role="button">
+                <i class="fas fa-envelope me-2"></i> curtiswarrensoftware@gmail.com
+            </a>
         </div>
     </header>
 
-    <nav class="navbar">
-        <div class="container">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <!-- Sticky Navbar -->
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Curtis Warren</a>
+            <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ai-projects">AI Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <main class="container">
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>Highly-skilled software engineer who enjoys building full-stack web applications, in the cloud. Many of these continue to serve a global audience of scientists, researchers, and professionals. Currently, focused on developing APIs, web applications, and event-driven systems—using Java, JavaScript, Python, HTML, and CSS.</p>
-        </section>
-
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="job-entry">
-                <h3>College Board</h3>
-                <p class="job-title">Engineer IV <span class="date">(March 2025 - Present)</span></p>
-                <ul>
-                    <li>Currently, developing an enterprise-level access control system.</li>
-                </ul>
-            </div>
-            <div class="job-entry">
-                <h3>College Board</h3>
-                <p class="job-title">Engineer III <span class="date">(April 2023 - Present)</span></p>
-                <ul>
-                    <li>Leveraged knowledge of full-stack software engineering, test automation, and cutting-edge cloud technologies to ensure product success.</li>
-                </ul>
-            </div>
-            <div class="job-entry">
-                <h3>College Board</h3>
-                <p class="job-title">Cloud Software Engineer II/Engineer II <span class="date">(March 2020 - April 2023)</span></p>
-                <ul>
-                    <li>Developed full-stack applications which continue to serve domestic and international audiences.</li>
-                </ul>
-            </div>
-            <div class="job-entry">
-                <h3>Digital Infuzion</h3>
-                <p class="job-title">(Jr.) Software Developer <span class="date">(March 2019 - March 2020)</span></p>
-                <p class="award">Rising Star Award Winner - 2019</p>
-                <ul>
-                    <li>Became the lead automation engineer on the team.</li>
-                    <li>Developed automated QA systems, which improved scientific data processing efforts.</li>
-                    <li>Became the documentation lead on the team.</li>
-                    <li>Ensured that the team met compliance requirements.</li>
-                    <li>Developed documentation standards for the team.</li>
-                    <li>Recognized for work and received the Rising Star Award for the year 2019.</li>
-                </ul>
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- About Section -->
+        <section id="about" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title h3 border-bottom pb-2 mb-3"><i
+                            class="fas fa-user-circle me-2 text-primary"></i>About Me</h2>
+                    <p class="card-text">Highly-skilled software engineer who enjoys building full-stack web
+                        applications, in the cloud. Many of these continue to serve a global audience of scientists,
+                        researchers, and professionals. Currently, focused on developing APIs, web applications, and
+                        event-driven systems—using Java, JavaScript, Python, HTML, and CSS.</p>
+                </div>
             </div>
         </section>
 
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <div class="education-entry">
-                <h3>University of Maryland University College</h3>
-                <p class="degree">Bachelor’s of Science in Software Development and Security</p>
-                <p class="minor">Minor: Computer Science <span class="date">(Spring 2016 — Spring 2018)</span></p>
-                <p class="details">Summa Cum Laude | GPA: 4.00/4.00</p>
-            </div>
-            <div class="education-entry">
-                <h3>Montgomery College</h3>
-                <p class="degree">Associates of Arts General Studies - (Science, Technology, Engineering and Mathematics)</p>
-                <p class="date">(Summer 2012 — Fall 2015)</p>
-                <p class="details">GPA: 3.21/4.00</p>
+        <!-- Experience Section -->
+        <section id="experience" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title h3 border-bottom pb-2 mb-4"><i
+                            class="fas fa-briefcase me-2 text-primary"></i>Experience</h2>
+
+                    <div class="job-entry mb-4">
+                        <h5 class="fw-bold">Engineer IV <span class="text-muted fw-normal float-end">March 2025 -
+                                Present</span></h5>
+                        <p class="text-muted mb-2">College Board</p>
+                        <ul class="list-unstyled ps-3">
+                            <li><i class="fas fa-chevron-right fa-xs me-2"></i>Currently, developing an enterprise-level
+                                access control system.</li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="job-entry mb-4 pt-2">
+                        <h5 class="fw-bold">Engineer III <span class="text-muted fw-normal float-end">April 2023 -
+                                Present</span></h5>
+                        <p class="text-muted mb-2">College Board</p>
+                        <ul class="list-unstyled ps-3">
+                            <li><i class="fas fa-chevron-right fa-xs me-2"></i>Leveraged knowledge of full-stack
+                                software engineering, test automation, and cutting-edge cloud technologies to ensure
+                                product success.</li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="job-entry mb-4 pt-2">
+                        <h5 class="fw-bold">Cloud Software Engineer II / Engineer II <span
+                                class="text-muted fw-normal float-end">March 2020 - April 2023</span></h5>
+                        <p class="text-muted mb-2">College Board</p>
+                        <ul class="list-unstyled ps-3">
+                            <li><i class="fas fa-chevron-right fa-xs me-2"></i>Developed full-stack applications which
+                                continue to serve domestic and international audiences.</li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="job-entry pt-2">
+                        <h5 class="fw-bold">(Jr.) Software Developer <span class="text-muted fw-normal float-end">March
+                                2019 - March 2020</span></h5>
+                        <p class="text-muted mb-2">Digital Infuzion</p>
+                        <p class="badge bg-success-subtle text-success-emphasis p-2 mb-3"><i
+                                class="fas fa-star me-1"></i>Rising Star Award Winner - 2019</p>
+                        <ul class="list-unstyled ps-3">
+                            <li><i class="fas fa-chevron-right fa-xs me-2"></i>Became the lead automation engineer on
+                                the team.</li>
+                            <li><i class="fas fa-chevron-right fa-xs me-2"></i>Developed automated QA systems, which
+                                improved scientific data processing efforts.</li>
+                            <li><i class="fas fa-chevron-right fa-xs me-2"></i>Became the documentation lead on the
+                                team.</li>
+                            <li><i class="fas fa-chevron-right fa-xs me-2"></i>Ensured that the team met compliance
+                                requirements.</li>
+                            <li><i class="fas fa-chevron-right fa-xs me-2"></i>Developed documentation standards for the
+                                team.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="skills-category">
-                <h3>Programming Languages & Technologies</h3>
-                <ul>
-                    <li>Java</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>APIs</li>
-                    <li>Event-Driven Systems</li>
-                </ul>
-            </div>
-            <div class="skills-category">
-                <h3>Concepts & Methodologies</h3>
-                <ul>
-                    <li>Full-Stack Web Development</li>
-                    <li>Cloud Computing</li>
-                    <li>Test Automation</li>
-                    <li>Software Development Life Cycle (SDLC)</li>
-                </ul>
+        <!-- AI Projects Section -->
+        <section id="ai-projects" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title h3 border-bottom pb-2 mb-4"><i class="fas fa-robot me-2 text-primary"></i>AI-Focused Brag Section</h2>
+                    <h5 class="fw-bold">AI-Powered PII & PHI Scanner</h5>
+                    <p class="mb-2">Created an AI-driven tool to scan codebases for sensitive PII (Personally Identifiable Information) and PHI (Protected Health Information) using Amazon Comprehend and Amazon Comprehend Medical.</p>
+                    <ul class="list-unstyled ps-3">
+                        <li><i class="fas fa-chevron-right fa-xs me-2"></i>Integrated seamlessly into the development lifecycle as a pre-commit Git hook using Husky, preventing sensitive data from reaching GitHub and AWS environments.</li>
+                        <li><i class="fas fa-chevron-right fa-xs me-2"></i>Improved overall code quality and security posture.</li>
+                        <li><i class="fas fa-chevron-right fa-xs me-2"></i>Engineered for flexibility, allowing it to run as a portable GitHub Action.</li>
+                        <li><i class="fas fa-chevron-right fa-xs me-2"></i>The initial version was developed in Bash, then re-engineered in JavaScript (Node.js), resulting in a <strong>5x performance increase</strong> due to Node.js's efficient thread management.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="certifications" class="section">
-            <h2>Professional Certificates</h2>
-            <ul>
-                <li>IBM Cybersecurity Fundamentals Professional Certificate</li>
-                <li><a href="https://credentials.edx.org/credentials/7234702b78a944a8bc66309ac3bcec62/" target="_blank" rel="noopener noreferrer">Secure Software Development Fundamentals Professional Certificate</a> (edX Credentials)</li>
-            </ul>
+        <!-- Education Section -->
+        <section id="education" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title h3 border-bottom pb-2 mb-4"><i
+                            class="fas fa-graduation-cap me-2 text-primary"></i>Education</h2>
+                    <div class="education-entry mb-4">
+                        <h5 class="fw-bold">University of Maryland Global Campus</h5>
+                        <p class="mb-1">Master's of Science in Cyper Operations</p>
+                        <p class="text-muted fst-italic">(Winter 2024 — Present)</p>
+                        <p class="badge bg-info-subtle text-info-emphasis p-2">GPA: 4.00/4.00</p>
+                    </div>
+                    <hr>
+                    <div class="education-entry mb-4">
+                        <h5 class="fw-bold">University of Maryland University College</h5>
+                        <p class="mb-1">Bachelor's of Science in Software Development and Security</p>
+                        <p class="text-muted fst-italic">Minor: Computer Science (Spring 2016 — Spring 2018)</p>
+                        <p class="badge bg-info-subtle text-info-emphasis p-2">Summa Cum Laude | GPA: 4.00/4.00</p>
+                    </div>
+                    <hr>
+                    <div class="education-entry pt-2">
+                        <h5 class="fw-bold">Montgomery College</h5>
+                        <p class="mb-1">Associates of Arts General Studies - (STEM)</p>
+                        <p class="text-muted fst-italic">(Summer 2012 — Fall 2015)</p>
+                        <p class="badge bg-secondary-subtle text-secondary-emphasis p-2">GPA: 3.21/4.00</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Feel free to reach out!</p>
-            <p>Email: <a href="mailto:curtiswarrensoftware@gmail.com">curtiswarrensoftware@gmail.com</a></p>
+        <!-- Skills Section -->
+        <section id="skills" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title h3 border-bottom pb-2 mb-4"><i
+                            class="fas fa-cogs me-2 text-primary"></i>Skills</h2>
+                    <div class="skills-category mb-4">
+                        <h5 class="fw-bold">Programming Languages & Technologies</h5>
+                        <div class="mt-3">
+                            <span class="badge rounded-pill text-bg-primary p-2 me-2 mb-2">Java</span>
+                            <span class="badge rounded-pill text-bg-primary p-2 me-2 mb-2">JavaScript</span>
+                            <span class="badge rounded-pill text-bg-primary p-2 me-2 mb-2">Python</span>
+                            <span class="badge rounded-pill text-bg-primary p-2 me-2 mb-2">HTML</span>
+                            <span class="badge rounded-pill text-bg-primary p-2 me-2 mb-2">CSS</span>
+                            <span class="badge rounded-pill text-bg-primary p-2 me-2 mb-2">APIs</span>
+                            <span class="badge rounded-pill text-bg-primary p-2 me-2 mb-2">Event-Driven Systems</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h5 class="fw-bold">Concepts & Methodologies</h5>
+                        <div class="mt-3">
+                            <span class="badge rounded-pill text-bg-secondary p-2 me-2 mb-2">Full-Stack Web
+                                Development</span>
+                            <span class="badge rounded-pill text-bg-secondary p-2 me-2 mb-2">Cloud Computing</span>
+                            <span class="badge rounded-pill text-bg-secondary p-2 me-2 mb-2">Test Automation</span>
+                            <span class="badge rounded-pill text-bg-secondary p-2 me-2 mb-2">Software Development Life
+                                Cycle (SDLC)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title h3 border-bottom pb-2 mb-4"><i
+                            class="fas fa-certificate me-2 text-primary"></i>Professional Certificates</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="https://credentials.edx.org/credentials/7234702b78a944a8bc66309ac3bcec62/"
+                                target="_blank" rel="noopener noreferrer">
+                                IBM Cybersecurity Fundamentals Professional Certificate
+                            </a> (edX Credentials)
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://credentials.edx.org/credentials/cdb97d6e92c14277bb872b7a10a5b7ff/"
+                                target="_blank" rel="noopener noreferrer">
+                                Secure Software Development Fundamentals Professional Certificate
+                            </a> (edX Credentials)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-5">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h2 class="card-title h3"><i class="fas fa-paper-plane me-2 text-primary"></i>Contact</h2>
+                    <p class="card-text my-4">Feel free to reach out for opportunities or collaborations.</p>
+                    <a data-mdb-ripple-init class="btn btn-primary btn-lg" href="mailto:curtiswarrensoftware@gmail.com"
+                        role="button">
+                        <i class="fas fa-envelope me-2"></i> Get in Touch
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white p-4">
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Curtis Warren. All rights reserved.</p>
+            <p class="mb-0">&copy; <span id="current-year"></span> Curtis Warren. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- MDB -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
+
+</html>
+</ul>
+</div>
+</nav>
+
+<script src="js/script.js"></script>
+</body>
+
 </html>
