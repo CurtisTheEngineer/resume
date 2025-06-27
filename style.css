@@ -38,7 +38,7 @@ body {
  * This section contains CSS rules that apply to smaller screens
  * to ensure the web app is mobile-friendly and responsive.
  */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .container {
         width: 100%; /* Ensure container takes full width on smaller screens */
         padding-left: 15px; /* Add horizontal padding to prevent content from touching edges */
