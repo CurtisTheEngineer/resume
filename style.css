@@ -63,6 +63,9 @@ img, video, iframe {
         scroll-padding-top: 56px; 
     }
 
+    header .btn {
+        word-break: break-all;
+    }
     /* --- Typography Adjustments --- */
     
     /* Adjust header text size for better readability on mobile */
