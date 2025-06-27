@@ -1,13 +1,31 @@
+/* --- Global Styles --- */
+
 html {
-    /* Offset for the sticky navbar */
+    /* Sets the box model to be more predictable for layout */
+    box-sizing: border-box;
+    /* Offset for the sticky navbar on desktop */
     scroll-padding-top: 70px; 
     /* Enable smooth scrolling */
     scroll-behavior: smooth;
 }
 
+/* Inherit box-sizing for all elements */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body {
     background-color: #f8f9fa; /* A slightly off-white from Bootstrap */
+    font-size: 1rem; /* Establish a base font size */
 }
+
+/* Ensure media elements are responsive by default */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Component & Section Styles --- */
 
 .job-entry ul li, .education-entry ul li {
     padding-left: 10px;
@@ -23,28 +41,30 @@ body {
     color: var(--mdb-primary) !important;
 }
 
-/* A subtle animation for cards on hover */
+/* A subtle animation for cards on hover, focus (keyboard), and active (touch) */
 .card {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.card:hover {
+.card:hover, .card:focus-within {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
 /*
- * Responsive adjustments for screens up to 991px (smartphones and tablets)
- *
- * This section contains CSS rules that apply to smaller screens
- * to ensure the web app is mobile-friendly and responsive.
+ * ===================================================================
+ * Responsive adjustments for screens up to 991px (smartphones/tablets)
+ * ===================================================================
 */
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
 
     html {
-        scroll-padding-top: 56px; /* Adjust for collapsed navbar height on mobile (MDB default is often 56px) */
+        /* Adjust for collapsed navbar height on mobile (MDB default is often 56px) */
+        scroll-padding-top: 56px; 
     }
 
+    /* --- Typography Adjustments --- */
+    
     /* Adjust header text size for better readability on mobile */
     header .display-4 {
         font-size: 2.5rem; /* Smaller font size for the main name */
@@ -53,32 +73,39 @@ body {
         font-size: 1.2rem; /* Smaller font size for the subtitle */
     }
 
+    /* --- Layout Stacking --- */
+    
     /* Adjust job/education entry titles and dates to stack vertically */
-    .job-entry h5 { /* Only apply flex rules to job entries where date is inside h5 */
+    .job-entry h5, .education-entry h5 {
         display: flex;
         flex-direction: column; /* Stack title and date vertically */
         align-items: flex-start; /* Align content to the left */
+        gap: 0.25rem; /* Add a small gap between title and date */
     }
-    .job-entry h5 span.float-end { /* Only apply to job entries */
+    .job-entry h5 span.float-end, .education-entry h5 span.float-end {
         float: none !important; /* Override Bootstrap's float for mobile layout */
-        margin-top: 5px; /* Add some space between the title and the date */
         text-align: left; /* Ensure the date aligns left */
     }
 
-    /* Adjust padding and indentation for list items in job/education sections */
+    /* --- List & Indentation Adjustments --- */
+
+    /* Adjust padding and indentation for list items for a clean hanging indent */
     .job-entry ul.list-unstyled,
     .education-entry ul.list-unstyled {
-        padding-left: 0 !important; /* Remove Bootstrap's default left padding (ps-3) */
+        padding-left: 0 !important; /* Remove Bootstrap's default left padding */
     }
     .job-entry ul.list-unstyled li,
     .education-entry ul.list-unstyled li {
-        margin-left: 20px; /* Indent the list item text */
-        text-indent: -20px; /* Pull the icon/bullet back to create a hanging indent */
+        margin-left: 25px;  /* Indent the list item text */
+        text-indent: -25px; /* Pull the icon/bullet back */
     }
     .job-entry ul.list-unstyled li .fa-chevron-right,
     .education-entry ul.list-unstyled li .fa-chevron-right {
         margin-right: 10px; /* Space between the icon and the list item text */
+        width: 15px; /* Explicit width for consistent alignment */
     }
+    
+    /* --- Component Sizing Adjustments --- */
 
     /* Adjust badge sizes in the skills section for better mobile presentation */
     .skills-category .badge {
@@ -88,7 +115,7 @@ body {
 
     /* Ensure card body padding is appropriate for smaller screens */
     .card-body {
-        padding: 1.25rem !important; /* Slightly reduce default padding for tighter mobile layout */
+        padding: 1.25rem !important; /* Use existing padding, but !important can override inline styles if needed */
     }
 
     /* Adjust button sizes in header and contact section */
