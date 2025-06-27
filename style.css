@@ -32,17 +32,17 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
+
 /*
- * Responsive adjustments
+ * Responsive adjustments for screens up to 991px (smartphones and tablets)
  *
  * This section contains CSS rules that apply to smaller screens
  * to ensure the web app is mobile-friendly and responsive.
- */
-@media (max-width: 1200px) {
-    .container {
-        width: 100%; /* Ensure container takes full width on smaller screens */
-        padding-left: 15px; /* Add horizontal padding to prevent content from touching edges */
-        padding-right: 15px;
+*/
+@media (max-width: 991px) {
+
+    html {
+        scroll-padding-top: 56px; /* Adjust for collapsed navbar height on mobile (MDB default is often 56px) */
     }
 
     /* Adjust header text size for better readability on mobile */
@@ -54,14 +54,12 @@ body {
     }
 
     /* Adjust job/education entry titles and dates to stack vertically */
-    .job-entry h5,
-    .education-entry h5 {
+    .job-entry h5 { /* Only apply flex rules to job entries where date is inside h5 */
         display: flex;
         flex-direction: column; /* Stack title and date vertically */
         align-items: flex-start; /* Align content to the left */
     }
-    .job-entry h5 span.float-end,
-    .education-entry h5 span.float-end {
+    .job-entry h5 span.float-end { /* Only apply to job entries */
         float: none !important; /* Override Bootstrap's float for mobile layout */
         margin-top: 5px; /* Add some space between the title and the date */
         text-align: left; /* Ensure the date aligns left */
