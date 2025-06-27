@@ -32,10 +32,76 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
-
-/* Responsive adjustments */
+/*
+ * Responsive adjustments
+ *
+ * This section contains CSS rules that apply to smaller screens
+ * to ensure the web app is mobile-friendly and responsive.
+ */
 @media (max-width: 768px) {
     .container {
-        width: 100%; /* Allow container to take full width on smaller screens */
+        width: 100%; /* Ensure container takes full width on smaller screens */
+        padding-left: 15px; /* Add horizontal padding to prevent content from touching edges */
+        padding-right: 15px;
+    }
+
+    /* Adjust header text size for better readability on mobile */
+    header .display-4 {
+        font-size: 2.5rem; /* Smaller font size for the main name */
+    }
+    header h4 {
+        font-size: 1.2rem; /* Smaller font size for the subtitle */
+    }
+
+    /* Adjust job/education entry titles and dates to stack vertically */
+    .job-entry h5,
+    .education-entry h5 {
+        display: flex;
+        flex-direction: column; /* Stack title and date vertically */
+        align-items: flex-start; /* Align content to the left */
+    }
+    .job-entry h5 span.float-end,
+    .education-entry h5 span.float-end {
+        float: none !important; /* Override Bootstrap's float for mobile layout */
+        margin-top: 5px; /* Add some space between the title and the date */
+        text-align: left; /* Ensure the date aligns left */
+    }
+
+    /* Adjust padding and indentation for list items in job/education sections */
+    .job-entry ul.list-unstyled,
+    .education-entry ul.list-unstyled {
+        padding-left: 0 !important; /* Remove Bootstrap's default left padding (ps-3) */
+    }
+    .job-entry ul.list-unstyled li,
+    .education-entry ul.list-unstyled li {
+        margin-left: 20px; /* Indent the list item text */
+        text-indent: -20px; /* Pull the icon/bullet back to create a hanging indent */
+    }
+    .job-entry ul.list-unstyled li .fa-chevron-right,
+    .education-entry ul.list-unstyled li .fa-chevron-right {
+        margin-right: 10px; /* Space between the icon and the list item text */
+    }
+
+    /* Adjust badge sizes in the skills section for better mobile presentation */
+    .skills-category .badge {
+        font-size: 0.85rem; /* Slightly smaller font size for badges */
+        padding: 0.4em 0.7em; /* Adjust padding for smaller badges */
+    }
+
+    /* Ensure card body padding is appropriate for smaller screens */
+    .card-body {
+        padding: 1.25rem !important; /* Slightly reduce default padding for tighter mobile layout */
+    }
+
+    /* Adjust button sizes in header and contact section */
+    .btn-lg {
+        padding: 0.75rem 1.25rem; /* Slightly smaller padding for large buttons */
+        font-size: 1rem; /* Smaller font size for large buttons */
+    }
+
+    /* Adjust horizontal rules for consistent spacing on mobile */
+    hr {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 }
