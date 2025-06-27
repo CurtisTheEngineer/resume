@@ -32,3 +32,10 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Allow container to take full width on smaller screens */
+    }
+}
