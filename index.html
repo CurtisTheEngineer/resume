@@ -5,19 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curtis Warren - Software Engineer</title>
-    <!-- Font Awesome -->
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body data-mdb-spy="scroll" data-mdb-target="#navbar-main" data-mdb-offset="0">
-    <!-- Header  -->
     <header>
         <div class="p-5 text-center bg-dark text-white">
             <h1 class="mb-3 display-4">Curtis Warren</h1>
@@ -29,7 +24,6 @@
         </div>
     </header>
 
-    <!-- Sticky Navbar -->
     <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-body-tertiary sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Curtis Warren</a>
@@ -51,13 +45,29 @@
         </div>
     </nav>
 
-    <!-- Main Content  -->
     <main class="container my-5">
-
-        <!-- AI Projects Section -->
-        <section id="ai-projects" class="mb-5">
+    
+        <section id="about" class="mb-5">
             <div class="card">
                 <div class="card-body">
+                    <div class="row gx-4 align-items-center">
+                        <div class="col-md-3 text-center mb-4 mb-md-0">
+                           <img src="https://via.placeholder.com/150" class="img-fluid rounded-circle" alt="Curtis Warren">
+                        </div>
+                        <div class="col-md-9">
+                            <h2 class="card-title h3 border-bottom pb-2 mb-3"><i class="fas fa-user-circle me-2 text-primary"></i>About Me</h2>
+                            <p class="card-text">Highly-skilled software engineer who enjoys building full-stack web
+                                applications, in the cloud. Many of these continue to serve a global audience of scientists,
+                                researchers, and professionals. Currently, focused on developing APIs, web applications, and
+                                event-driven systems—using Java, JavaScript, Python, HTML, and CSS.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-projects" class="mb-5">
+            <div class="card" tabindex="0"> <div class="card-body">
                     <h2 class="card-title h3 border-bottom pb-2 mb-4"><i
                             class="fas fa-robot me-2 text-primary"></i>AI-Focused Brag Section</h2>
                     <h5 class="fw-bold">AI-Powered PII & PHI Scanner</h5>
@@ -80,25 +90,8 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <!-- <section id="about" class="mb-5">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title h3 border-bottom pb-2 mb-3"><i
-                            class="fas fa-user-circle me-2 text-primary"></i>About Me</h2>
-                    <p class="card-text">Highly-skilled software engineer who enjoys building full-stack web
-                        applications, in the cloud. Many of these continue to serve a global audience of scientists,
-                        researchers, and professionals. Currently, focused on developing APIs, web applications, and
-                        event-driven systems—using Java, JavaScript, Python, HTML, and CSS.</p>
-                </div>
-            </div>
-        </section> -->
-
-
-        <!-- Experience Section -->
         <section id="experience" class="mb-5">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" tabindex="0"> <div class="card-body">
                     <h2 class="card-title h3 border-bottom pb-2 mb-4"><i
                             class="fas fa-briefcase me-2 text-primary"></i>Experience</h2>
 
@@ -166,40 +159,39 @@
             </div>
         </section>
 
-        <!-- Education Section -->
         <section id="education" class="mb-5">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" tabindex="0"> <div class="card-body">
                     <h2 class="card-title h3 border-bottom pb-2 mb-4"><i
                             class="fas fa-graduation-cap me-2 text-primary"></i>Education</h2>
                     <div class="education-entry mb-4">
-                        <h5 class="fw-bold">University of Maryland Global Campus - Master's of Science</h5>
-                        <p class="mb-1">Master's of Science in Cyper Operations</p>
-                        <p class="text-muted fst-italic">(Winter 2024 — Present)</p>
+                        <h5 class="fw-bold">University of Maryland Global Campus
+                            <span class="d-block text-muted fw-normal">Master's of Science in Cyber Operations</span>
+                            <span class="d-block text-muted fw-normal fst-italic">(Winter 2024 — Present)</span>
+                        </h5>
                         <p class="badge bg-info-subtle text-info-emphasis p-2">GPA: 4.00/4.00</p>
                     </div>
                     <hr>
                     <div class="education-entry mb-4">
-                        <h5 class="fw-bold">University of Maryland University College - Bachelor's of Science</h5>
-                        <p class="mb-1">Bachelor's of Science in Software Development and Security</p>
-                        <p class="text-muted fst-italic">Minor: Computer Science (Spring 2016 — Spring 2018)</p>
+                        <h5 class="fw-bold">University of Maryland University College
+                            <span class="d-block text-muted fw-normal">Bachelor's of Science in Software Development and Security</span>
+                            <span class="d-block text-muted fw-normal fst-italic">Minor: Computer Science (Spring 2016 — Spring 2018)</span>
+                        </h5>
                         <p class="badge bg-info-subtle text-info-emphasis p-2">Summa Cum Laude | GPA: 4.00/4.00</p>
                     </div>
                     <hr>
                     <div class="education-entry pt-2">
-                        <h5 class="fw-bold">Montgomery College</h5>
-                        <p class="mb-1">Associates of Arts General Studies - (STEM)</p>
-                        <p class="text-muted fst-italic">(Summer 2012 — Fall 2015)</p>
+                        <h5 class="fw-bold">Montgomery College
+                            <span class="d-block text-muted fw-normal">Associates of Arts General Studies - (STEM)</span>
+                            <span class="d-block text-muted fw-normal fst-italic">(Summer 2012 — Fall 2015)</span>
+                        </h5>
                         <p class="badge bg-secondary-subtle text-secondary-emphasis p-2">GPA: 3.21/4.00</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="mb-5">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" tabindex="0"> <div class="card-body">
                     <h2 class="card-title h3 border-bottom pb-2 mb-4"><i
                             class="fas fa-cogs me-2 text-primary"></i>Skills</h2>
                     <div class="skills-category mb-4">
@@ -255,10 +247,8 @@
             </div>
         </section>
 
-        <!-- Certifications Section -->
         <section id="certifications" class="mb-5">
-            <div class="card">
-                <div class="card-body">
+            <div class="card" tabindex="0"> <div class="card-body">
                     <h2 class="card-title h3 border-bottom pb-2 mb-4"><i
                             class="fas fa-certificate me-2 text-primary"></i>Professional Certificates</h2>
                     <ul class="list-group list-group-flush">
@@ -279,10 +269,8 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="mb-5">
-            <div class="card text-center">
-                <div class="card-body">
+            <div class="card text-center" tabindex="0"> <div class="card-body">
                     <h2 class="card-title h3"><i class="fas fa-paper-plane me-2 text-primary"></i>Contact</h2>
                     <p class="card-text my-4">Feel free to reach out for opportunities or collaborations.</p>
                     <a data-mdb-ripple-init class="btn btn-primary btn-lg" href="mailto:curtiswarrensoftware@gmail.com"
@@ -294,17 +282,14 @@
         </section>
     </main>
 
-    <!-- Footer  -->
     <footer class="bg-dark text-center text-white p-4">
         <div class="container">
             <p class="mb-0">&copy; <span id="current-year"></span> Curtis Warren. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- MDB -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
-    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
 
